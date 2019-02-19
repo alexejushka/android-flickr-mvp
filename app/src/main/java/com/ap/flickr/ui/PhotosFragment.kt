@@ -93,7 +93,6 @@ class PhotosFragment : Fragment(), PhotosContract.View, KodeinAware {
         }
     }
 
-    //override fun showPhotos(photos: List<Photo>?) {
     override fun showPhotos(photos: List<Photo>) {
         binding.photos = photos
         photoAdapter.setPhotos(photos)
