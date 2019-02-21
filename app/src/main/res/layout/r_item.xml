@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
 
     <data>
-
         <variable
             name="photo"
             type="com.ap.flickr.pojo.Photo" />
@@ -19,9 +19,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:onClick="@{() -> presenter.openPhoto(photo)}"
-        card_view:cardCornerRadius="4dp"
-        card_view:cardElevation="2dp"
-        card_view:contentPadding="5dp">
+        app:cardCornerRadius="4dp"
+        app:cardElevation="2dp"
+        app:contentPadding="5dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -33,8 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:src="@{photo.url_m}"
-                android:transitionName="transitionname" />
+                app:imageUrl="@{photo.url_m}" />
 
         </LinearLayout>
 
